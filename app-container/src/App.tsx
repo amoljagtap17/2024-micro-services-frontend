@@ -3,7 +3,9 @@
 import ChartApp from '@app-chart/App';
 // @ts-ignore
 import { App as FormApp } from '@app-form/App';
-import { Container, Grid } from '@mui/material';
+// @ts-ignore
+import GridApp from '@app-grid/App';
+import { Container, Grid, Stack } from '@mui/material';
 
 export function App() {
   return (
@@ -13,7 +15,10 @@ export function App() {
           <FormApp />
         </Grid>
         <Grid item xs={12} lg={8}>
-          <ChartApp />
+          <Stack>
+            <ChartApp />
+            <GridApp />
+          </Stack>
         </Grid>
       </Grid>
     </Container>

@@ -15,6 +15,7 @@ export default defineConfig({
       remotes: {
         '@app-form': 'http://localhost:4001/assets/remoteEntry.js',
         '@app-chart': 'http://localhost:4002/assets/remoteEntry.js',
+        '@app-grid': 'http://localhost:4003/assets/remoteEntry.js',
       },
       shared: [
         'react',
