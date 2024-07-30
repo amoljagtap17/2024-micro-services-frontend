@@ -1,5 +1,5 @@
-import { Button } from '@mui/material';
+import { UserPreference } from './components/section';
 
 export function App() {
-  return <Button variant="contained">Primary Button</Button>;
+  return <UserPreference />;
 }
