@@ -8,6 +8,10 @@ export default defineConfig({
     react(),
     federation({
       name: 'app-container',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './AppProvider': './src/app/providers/AppProvider',
+      },
       remotes: {
         '@app-form': 'http://localhost:4001/assets/remoteEntry.js',
         '@app-chart': 'http://localhost:4002/assets/remoteEntry.js',

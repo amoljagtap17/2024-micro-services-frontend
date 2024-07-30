@@ -8,8 +8,12 @@ export default defineConfig({
     react(),
     federation({
       name: 'app-form',
+      filename: 'remoteEntry.js',
       exposes: {
         './App': './src/App',
+      },
+      remotes: {
+        '@app-container': 'http://localhost:4000/assets/remoteEntry.js',
       },
       shared: [
         'react',

@@ -1,16 +1,13 @@
-import { ThemeProvider } from '@emotion/react';
-import { CssBaseline } from '@mui/material';
+// @ts-ignore
+import AppProvider from '@app-container/AppProvider';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './App.tsx';
-import theme from './app/mui/theme.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-
+    <AppProvider>
       <App />
-    </ThemeProvider>
+    </AppProvider>
   </React.StrictMode>,
 );
