@@ -9,9 +9,16 @@ export default defineConfig({
     federation({
       name: 'app-container',
       remotes: {
+        '@app-form': 'http://localhost:4001/assets/remoteEntry.js',
         '@app-chart': 'http://localhost:4002/assets/remoteEntry.js',
       },
-      shared: ['react', 'react-dom'],
+      shared: [
+        'react',
+        'react-dom',
+        '@emotion/react',
+        '@emotion/styled',
+        '@mui/material',
+      ],
     }),
   ],
   build: {

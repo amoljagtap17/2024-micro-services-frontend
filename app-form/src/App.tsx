@@ -1,3 +1,5 @@
+import { Button } from '@mui/material';
+
 export function App() {
-  return <h1>Form App</h1>;
+  return <Button variant="contained">Primary Button</Button>;
 }
