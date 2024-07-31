@@ -1,17 +1,23 @@
 import { ThemeProvider } from '@emotion/react';
 import { CssBaseline } from '@mui/material';
-import React from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import theme from '../../mui/theme';
 
 interface IAppProviderProps {
   children: React.ReactNode;
 }
 
-export default function AppProvider({ children }: IAppProviderProps) {
+const queryClient = new QueryClient();
+
+export function AppProvider({ children }: IAppProviderProps) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {children}
+      <QueryClientProvider client={queryClient}>
+        {children}
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
     </ThemeProvider>
   );
 }

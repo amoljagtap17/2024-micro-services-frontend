@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './App.tsx';
-import AppProvider from './app/providers/AppProvider/index.tsx';
+import { AppProvider } from './app/providers';
 import { Navbar } from './components/sections';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
