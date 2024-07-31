@@ -39,14 +39,16 @@ export function UserPreferenceForm() {
         <RHFRadioGroup<Schema>
           name="riskLevel"
           options={riskLevelOptions}
-          label="Gender"
+          label="Risk Level"
         />
 
         <Stack direction="row-reverse" spacing={2}>
           <Button variant="contained" type="submit">
             Save
           </Button>
-          <Button onClick={handleReset}>Reset</Button>
+          <Button variant="outlined" onClick={handleReset}>
+            Reset
+          </Button>
         </Stack>
       </Stack>
     </Box>

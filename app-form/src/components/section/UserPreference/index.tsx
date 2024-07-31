@@ -1,4 +1,4 @@
-import { DevTool } from '@hookform/devtools';
+// import { DevTool } from '@hookform/devtools';
 import { FormProvider } from 'react-hook-form';
 import { UserPreferenceForm } from './UserPreferenceForm';
 import { useUserPreference } from './useUserPreference';
@@ -9,7 +9,7 @@ export function UserPreference() {
   return (
     <FormProvider {...methods}>
       <UserPreferenceForm />
-      <DevTool control={methods.control} />
+      {/* <DevTool control={methods.control} /> */}
     </FormProvider>
   );
 }

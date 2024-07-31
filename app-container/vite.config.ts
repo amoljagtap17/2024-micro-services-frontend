@@ -11,6 +11,7 @@ export default defineConfig({
       filename: 'remoteEntry.js',
       exposes: {
         './AppProvider': './src/app/providers/AppProvider',
+        './Navbar': './src/components/sections/Navbar',
       },
       remotes: {
         '@app-form': 'http://localhost:4001/assets/remoteEntry.js',
